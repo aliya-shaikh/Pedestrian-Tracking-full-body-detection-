@@ -29,7 +29,7 @@ def imagebutton():
 	body = trained_face_data.detectMultiScale(grayscaled_img)
 	for (x,y,w,h) in body:
 		cv2.rectangle(img, (x,y),(x+w, y+h),(randrange(256),randrange(256),randrange(256)),2)
-	cv2.imshow('Face Detector',img)
+	cv2.imshow('pedestrian Detector',img)
 	cv2.waitKey()
 
 def videobutton():
@@ -43,7 +43,7 @@ def videobutton():
 		body = trained_face_data.detectMultiScale(grayscaled_img)
 		for (x,y,w,h) in body:
 			cv2.rectangle(frame,(x,y),(x+w, y+h),(randrange(256),randrange(256),randrange(256)),2)
-		cv2.imshow("Face Detector",frame)
+		cv2.imshow("pedestrian Detector",frame)
 		cv2.waitKey()
 
 def webacambutton():
@@ -55,7 +55,7 @@ def webacambutton():
 		body = trained_face_data.detectMultiScale(grayscaled_img)
 		for (x,y,w,h) in body:
 			cv2.rectangle(frame,(x,y),(x+w, y+h),(randrange(256),randrange(256),randrange(256)),2)
-		cv2.imshow('Face Detector',frame)
+		cv2.imshow('pedestrian Detector',frame)
 		key = cv2.waitKey(1)
 		if key==81 or key==113:
 			break
